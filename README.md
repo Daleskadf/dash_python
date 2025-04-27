@@ -1,44 +1,44 @@
-# Dashboard Interactivo con Dash + MySQL
+# Interactive Dashboard with Dash + MySQL
 
-Este proyecto es un dashboard interactivo desarrollado en **Python** usando **Dash**, **Plotly** y **MySQL** como fuente de datos. Permite visualizar ventas por producto y categoría en tiempo real, sin necesidad de programar frontend.
+This project is an interactive dashboard developed in **Python** using **Dash**, **Plotly**, and **MySQL** as the data source. It allows you to visualize sales by product and category in real time, without the need to program a frontend.
 
-## ¿Qué es Dash?
+## What is Dash?
 
-Dash es un framework de Python que permite construir aplicaciones web interactivas de visualización de datos de manera sencilla, sin necesidad de escribir HTML, CSS o JavaScript.
+Dash is a Python framework that allows you to easily build interactive data visualization web applications, without the need to write HTML, CSS, or JavaScript.
 
-## Requisitos Previos
+## Prerequisites
 
 - Python 3.7+
-- MySQL Server instalado y ejecutándose
-- Tener creada la base de datos `tienda_ventas` con las tablas necesarias (`productos`, `ventas`).
+- MySQL Server installed and running
+- Have the `tienda_ventas` database created with the necessary tables (`productos`, `ventas`).
 
-## Instrucciones de Instalación y Ejecución
+## Installation and Execution Instructions
 
-### 1. Clona el repositorio
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+git clone https://github.com/your_username/your_repository.git
+cd your_repository
 ```
 
-### 2. Crea un entorno virtual (opcional)
+### 2. Create a virtual environment (optional)
 ```
 python -m venv venv
-source venv/bin/activate    # En Mac/Linux
-venv\Scripts\activate       # En Windows
+source venv/bin/activate    # On Mac/Linux
+venv\Scripts\activate       # On Windows
 ```
 
-### 3. Instala las dependencias
+### 3. Install the dependencies
 ```
 dash
 pandas
 mysql-connector-python
 plotly
-Luego instala todo con:
+Then install everything with:
 pip install -r requirements.txt
 ```
 
-### 4. Configura la conexión a tu base de datos
+### 4. Configure your database connection
 Edita el archivo config.py:
 ```
 # config.py
@@ -46,21 +46,20 @@ Edita el archivo config.py:
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "",  # Tu contraseña de MySQL
+    "password": "",  # Your MySQL password
     "database": "tienda_ventas"
 }
 ```
 
-### 5. Ejecuta la aplicación
+### 5. Run the application
 ```
 python app.py
 ```
 
-### 6. Abre el navegador
+### 6. Open the browser
 ```
 http://127.0.0.1:8050/
 ```
-¡Y verás el dashboard funcionando!
+And you will see the dashboard running!
 
-Si no tienes MySQL instalado, puedes usar XAMPP, MAMP o servicios de base de datos en la nube.
-Para producción, se recomienda desactivar debug=True en app.run() y usar servidores como Gunicorn o uWSGI.
+If you don't have MySQL installed, you can use XAMPP, MAMP, or cloud database services. For production, it is recommended to disable debug=True in app.run() and use servers like Gunicorn or uWSGI.
